@@ -1,0 +1,22 @@
+# travis build
+install: skip
+
+before_script:
+  - shellcheck ./src/synogandip.sh
+
+script:
+  - ./build.sh
+
+after_success:
+  - echo ">>>>>>>>>>>>>> BUILD SUCCESS"
+
+after_failure:
+  - echo ">>>>>>>>>>>>>> BUILD FAILED"
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: ./build/synogandip*.zip
+  skip_cleanup: true
+  on:
+    tags: true
