@@ -2,6 +2,11 @@
 
 _A simple tool to easily update a DNS record hosted by the registrar Gandi.net with your public IP_
 
+- [Getting started](#getting-started)
+- [How it works?](#how-it-works)
+- [Configuring on your Synology NAS](#configuring-on-your-synology-nas)
+- [Known limitations](#known-limitations)
+
 ***
 
 If you answer **yes** to these questions you might be interested by this tool:
